@@ -1,0 +1,29 @@
+.section-2 {
+    position: relative;
+
+  .section-content {
+      align-items: center;
+
+      .text-content {
+        margin-bottom: 100px;
+        max-width: 792px;
+        text-align: center;
+ 
+        p:first-child {
+            margin-bottom: 50px;    
+        }
+    }
+  }
+
+  .section-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.7;
+      height: 100%;
+
+      @include media-up(m) {
+        opacity: 1;
+      }
+    }
+}

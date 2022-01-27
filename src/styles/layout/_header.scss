@@ -1,0 +1,59 @@
+// Header
+.site-header {
+    height: 700px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .header-content {
+
+        .content {
+            max-width: 600px;
+            margin-top: 180px;
+            text-align: center;
+
+            .main-title {
+                text-transform: uppercase;
+                margin-bottom: 100px;
+
+                h1 {
+                    font-size: 48px;
+                }
+            }
+
+            .subtitle {
+                
+                .subtitle-heading {
+
+                    h2 {
+                        text-transform: uppercase;
+                        font-size: 36px;
+                    }
+                }
+            }
+        }
+    }
+   
+  
+    .header-background {
+        display: none;
+
+        @include media-up(m) {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: -10%;   
+            opacity: .3;
+        }
+
+        @include media-up(l) {
+            opacity: 1;
+        }
+    }
+
+    @include media-down(s) {
+        .hamburger-menu {
+            display: flex;
+        }
+    }
+}

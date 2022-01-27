@@ -1,0 +1,14 @@
+.content-line {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 2px;
+        background-color: $secondary;
+        top: 110%;
+        left: 50%;
+        transform:translateX(-50%);
+    }
+}

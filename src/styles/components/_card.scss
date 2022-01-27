@@ -1,0 +1,37 @@
+.cards {
+    
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $primary;
+    
+        .card-icon {
+            margin-top: 90px;
+        }
+
+        .card-content {
+            margin-top: 40px;
+            max-width: 275px;
+        }
+    }
+
+    .card:first-child {
+        .card-icon {
+            margin-top: 0;
+        }
+    }
+    
+    @include media-up(s) {
+        display: flex;
+
+        .card {
+            flex-basis: 100%;
+            justify-content: flex-end;
+
+            .card-icon {
+                margin: 0;
+            }
+        }
+    }
+}

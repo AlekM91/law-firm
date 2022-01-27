@@ -1,0 +1,29 @@
+// Footer
+.site-footer {
+    padding: 90px;
+
+    .heading-main {
+        margin-bottom: 10px;
+        font-size: 25px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    @include media-up(m) {
+
+    .heading-main {
+        font-size: 36px;
+    }
+
+     .cards {
+         flex-direction: row;
+         .card {
+             .card-content {
+                 margin-top: auto;
+             }
+         }
+     }
+    }
+}
