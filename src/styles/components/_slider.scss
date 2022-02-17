@@ -1,13 +1,27 @@
 .slider {
+    position: relative;
+    height: 50vh;
+    overflow: hidden;
 
     .slide {
-        margin: auto;
+        // needs a little bit of a rework for small phones like my own :D
+        position: absolute;
         transition: transform .5s linear; 
+        height: 40vh;
+        width: 100%;
+
+        .slide-content {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform:translate(-50%, -50%);
+        }
     }
 
     .slider-button {
         position: absolute;
-        top: 71%;
+        top: 70%;
     }
 
     .slider-button-left {
@@ -20,7 +34,7 @@
 
     .slider-dots {
         position: absolute;
-        bottom: 5%;
+        top: 70%;
         left: 50%;
         transform: translateX(-50%);
         display: flex;
@@ -34,7 +48,7 @@
             height: 1rem;
             width: 1rem;
             border-radius: 50%;
-            margin-right: 1.75rem;
+            margin-right: 1.5rem;
             cursor: pointer;
             transition: all 0.5s;
 
@@ -49,4 +63,3 @@
         }
     }
 }
-
