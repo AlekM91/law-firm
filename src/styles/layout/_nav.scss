@@ -43,14 +43,12 @@
 
         ul {
             position: absolute;
-            height: 100vh;
             background: #e6875b4e ;
             backdrop-filter: blur(5px);
             color: $secondary;
             height: 100vh;
-            width: 50%;
+            width: 100%;
             top: 0;
-            margin-top: -20px;
             padding: 0;
             right: -100%;
             flex-direction: column;
@@ -67,6 +65,7 @@
 
                 a {
                     padding: 20px;
+                    font-size: 24px;
                 }
             }
         }

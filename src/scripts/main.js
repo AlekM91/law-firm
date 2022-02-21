@@ -8,9 +8,12 @@ if(module.hot) {
 // Hamburger Menu
 let hamburgerMenu = document.querySelector('.hamburger-menu');
 let mainNav = document.querySelector('.main-nav ul');
+let body = document.querySelector('body')
 hamburgerMenu.addEventListener('click', function(e) {
     hamburgerMenu.classList.toggle('hamburger-menu-active');
-    mainNav.classList.toggle('menu-active')
+    mainNav.classList.toggle('menu-active');
+    body.classList.toggle('no-scroll');
+    
 })
 
 // Smooth Scroll
@@ -21,6 +24,7 @@ mainNav.addEventListener('click', function(e) {
         document.querySelector(id).scrollIntoView({behavior: 'smooth'});
         mainNav.classList.remove('menu-active');
         hamburgerMenu.classList.remove('hamburger-menu-active');
+        body.classList.remove('no-scroll');
     }
 })
 
@@ -61,7 +65,7 @@ function scrollElement() {
         sectionObserver.observe(section);
     })
 }
-scrollElement();
+// scrollElement();
 
 
 // Slider
@@ -87,9 +91,6 @@ function slider() {
         slides.forEach((s, i) => s.style.transform = `translateX(${100 * (i - slide)}%)`);
         activeDot(slide)
     }
-
-
- 
     
     createDot()
     goToSlide(currentSlide);
