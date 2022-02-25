@@ -35,6 +35,7 @@ function sticky() {
     let observer = new IntersectionObserver(function(entries, observer){
         const [entry] = entries;
         document.querySelector('.main-nav').classList.remove('sticky')
+        
         if(!entry.isIntersecting){
             document.querySelector('.main-nav').classList.add('sticky')
         }
@@ -42,7 +43,7 @@ function sticky() {
     }, {
         root: null,
         threshold: 0,
-        rootMargin: `-${navHeight}px`
+        // rootMargin: `-${navHeight}px`
     });
     observer.observe(header);
 }

@@ -1,7 +1,11 @@
 .slider {
     position: relative;
-    height: 50vh;
+    height: 40vh;
     overflow: hidden;
+
+    @include media-up(m) {
+        height: 400px;
+    }
 
     .slide {
         // needs a little bit of a rework for landscape view
@@ -11,6 +15,10 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+
+        @include media-up(m) {
+            height: 400px;
+        }
     }
 
 }
@@ -19,6 +27,8 @@
     .slider-button {
         position: absolute;
         top: 70%;
+        // Can't decide whether I like arrows or not 
+        display: none;
     }
 
     .slider-button-left {

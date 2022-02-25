@@ -1,0 +1,72 @@
+form {
+    margin-bottom: 100px;
+    position: relative;
+    z-index: 2;
+    .form-content {
+        display: flex;
+        justify-content: space-between;
+        
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 1;
+            margin-right: 80px;
+            color: white;
+        }
+
+        .msg {
+            flex: 1;
+            
+            textarea {
+                width: 100%;
+                height: 100%;
+                resize: none;
+            }
+        }
+
+        input, textarea {
+            background: transparent;
+            border: 1px solid $secondary;
+            border-radius: 5px;
+            color: $secondary;
+            padding: 20px;
+
+            &::placeholder {
+                color: $secondary;
+            }
+        }
+    }
+
+    .submit-button {
+        background: $secondary;
+        color: $primary;
+        padding: 15px 40px;
+        border-radius: 5px;
+        margin-top: 40px;
+        transition: .2s;
+        border: 1px solid transparent;
+        
+        &:hover {
+            cursor: pointer;
+            color: $white;
+            border-color: $white;
+        }
+    }
+}
+
+@include media-down(m) {
+    form {
+        .form-content {
+            flex-direction: column;
+
+            .inputs {
+                margin-right: 0;
+            }
+
+            input {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

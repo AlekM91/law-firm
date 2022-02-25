@@ -1,6 +1,6 @@
 // Header
 .site-header {
-    height: 700px;
+    height: 100vh;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -33,8 +33,11 @@
             }
         }
     }
+
+    @include media-up(m) {
+        height: 700px;
+    }
    
-  
     .header-background {
         display: none;
 

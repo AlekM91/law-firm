@@ -2,6 +2,13 @@
     opacity: 0;
     transform:translateY(100px)
 }
+.sticky {
+    position: fixed!important;
+    background: $primary;
+    width: 100%;
+    max-width: 100%;
+    border-bottom: 1px solid $secondary;
+}
 
 .no-scroll {
     overflow: hidden;
